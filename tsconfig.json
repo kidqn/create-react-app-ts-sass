@@ -16,7 +16,8 @@
         "./src/**/*",
         "./src/**/*.ts",
         "./src/**/*.tsx",
-        "./node_modules/@types/**/*"
+        "./node_modules/@types/**/*",
+         "./node_modules/bootstrap/dist/css/*"
     ],
     "exclude": [
         "node_modules"

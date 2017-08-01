@@ -4,7 +4,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, ul
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -25,12 +25,15 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-size: 22px;
+	font-size: 15px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 }
-ol, ul {
-	list-style: none;
+li {
+	margin: 0 0 5px 0;
+    list-style: none;
+    background-color: #e8e7e7;
+    padding: 10px;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -59,5 +62,9 @@ blockquote:nth-of-type(2){
 	color: #65c2ed;
 	font-family: 'Ubuntu',sans-serif;
     font-style: italic;
+}
+.Posts {
+	width: 750px;
+	margin: auto;
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,900&subset=vietnamese');

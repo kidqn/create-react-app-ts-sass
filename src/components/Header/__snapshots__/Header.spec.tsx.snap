@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component render a correct snapshot 1`] = `
+<div
+  className="Header"
+>
+  <span>
+    <div
+      className="Header-title"
+    >
+      Best statement collections
+    </div>
+    <div
+      className="Header-desc"
+    >
+      <span>
+        Work
+      </span>
+      <span>
+        The
+      </span>
+      <span>
+        Color
+      </span>
+    </div>
+  </span>
+</div>
+`;

@@ -8,6 +8,7 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-react-app": "^3.0.1",
     "babel-runtime": "6.23.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
@@ -25,6 +26,7 @@
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "20.0.4",
     "node-sass": "^4.5.3",
     "object-assign": "4.1.1",
@@ -35,16 +37,19 @@
     "react-dev-utils": "^3.0.2",
     "react-dom": "^15.6.1",
     "react-error-overlay": "^1.0.9",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "sw-precache-webpack-plugin": "0.11.3",
     "ts-loader": "^2.3.1",
-    "typescript": "2.4.0",
+    "typescript": "^2.4.2",
     "url-loader": "0.5.9",
     "webpack": "2.6.1",
     "webpack-dev-server": "2.5.0",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -52,36 +57,19 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx"
-    ]
+      "^.+\\.(css|scss|sass|less)$": "<rootDir>/config/jest/cssTransform.js",
+      "^.+\\.(gif|ttf|eot|svg)$": "<rootDir>/config/jest/fileTransform.js"
+    }
   },
   "babel": {
     "presets": [
@@ -95,9 +83,15 @@
   "license": "MIT",
   "devDependencies": {
     "@types/classnames": "^2.2.0",
+    "@types/enzyme": "^2.8.4",
+    "@types/jest": "^20.0.5",
     "@types/react": "^15.0.39",
     "@types/react-dom": "^15.5.1",
+    "@types/redux-saga": "^0.10.5",
     "awesome-typescript-loader": "^3.2.2",
-    "redux": "^3.7.2"
+    "enzyme": "^2.9.1",
+    "react-test-renderer": "^15.6.1",
+    "tape": "^4.8.0",
+    "ts-jest": "^20.0.7"
   }
 }

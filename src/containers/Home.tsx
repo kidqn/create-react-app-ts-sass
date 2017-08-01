@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import Header from '../components/Header/Header';
 
 export default class Home extends React.Component<any, any> {
@@ -15,4 +15,4 @@ export default class Home extends React.Component<any, any> {
             </div>
         );
     }
-}
+}*/
